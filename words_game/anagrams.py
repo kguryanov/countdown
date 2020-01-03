@@ -43,7 +43,7 @@ class Anagrams:
         """
         count: int = 0
         for c in set(self._conundrum):
-            c_count = sum(map(lambda x: 1 if c in x else 0, word))
+            c_count = word.count(c)
             if c_count == self._conundrum_map[c]:
                 count += c_count
 
@@ -68,7 +68,7 @@ class Anagrams:
 
 
 if __name__ == '__main__':
-    my_conundrum = 'specificness'
+    my_conundrum = 'nuttylog'
     start = time.time()
     words_game = Anagrams(my_conundrum)
     print("Dictionary init time: {}\n".format(time.time() - start))
