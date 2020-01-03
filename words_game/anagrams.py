@@ -19,7 +19,7 @@ class Anagrams:
     def set_conundrum(self, conundrum):
         self._conundrum = conundrum
         for c in set(self._conundrum):
-            self._conundrum_map[c] = sum(map(lambda x: 1 if c in x else 0, self._conundrum))
+            self._conundrum_map[c] = self._conundrum.count(c)
 
     def get_conundrum(self):
         return self._conundrum
